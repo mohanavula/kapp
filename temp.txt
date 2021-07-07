@@ -1,0 +1,106 @@
+@if ($regulation)
+        <hr />
+        <div class="accordion" id="regulation-accordion" x-data="{ selectedSpecialiation: @entangle('specialization_id')}">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="regulations">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#regulation-pane" aria-expanded="false" aria-controls="regulation-pane">
+                  {{ $regulation->short_name }}
+                </button>
+              </h2>
+              <div id="regulation-pane" class="accordion-collapse collapse" aria-labelledby="regulations" wire:ignore.self>
+                <div class="accordion-body">
+                    <div>Title: {{ $regulation->short_name . " " . $regulation->name }}</div>
+                    <div>Start Year: {{ $regulation->start_year }}</div>
+                    <div>End Year: {{ $regulation->end_year }}</div>
+                    <div>Semesters: {{ $regulation->total_semesters }}</div>
+                    <div>Credits: {{ $regulation->total_credits }}</div>
+                    <div>Pass CGPA: {{ $regulation->pass_cgpa }}</div>
+                    <div>Currency: @if ($regulation->in_force) In Force @else Sunset @endif</div>
+                    <div>Rating: Rating</div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="curriculum">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#curriculum-pane" aria-expanded="false" aria-controls="curriculum-pane">
+                  Curriculum
+                </button>
+              </h2>
+              <div id="curriculum-pane" class="accordion-collapse collapse" aria-labelledby="curriculum"  wire:ignore.self>
+                <div class="accordion-body">
+                    <div class="row">
+                      <div class="col">
+                        Specialization 
+                        <div class="btn-group" role="group">
+                          @forelse ($specializations as $s)
+                            <button type="button" class="btn" x-bind:class="selectedSpecialiation == {{ $s->id }} ? 'btn-danger' : 'btn-outline-danger'" wire:click.self="$set('specialization_id', {{ $s->id }})">{{ $s->short_name }}</button>
+                          @empty
+                            <div>Sorry. Nothing to show.</div>
+                          @endforelse
+                        </div>
+                      </div>
+                      <div class="col">
+                        Semester 
+                        <div class="btn-group" role="group">
+                          @forelse ($semesters as $s)
+                            <button type="button" class="btn btn-outline-danger" wire:click="$set('semester_id', {{ $s->id }})">{{ $s->semester_number }}</button>
+                          @empty
+                            <div>Sorry. Nothing to show.</div>
+                          @endforelse
+                        </div>
+                      </div>
+                    </div>
+                    @forelse ($curricula->filter(function($f) { return $f->specialization_id == $this->specialization_id; }) as $c)
+                        @if ($loop->first)
+                            <table class="table table-sm table-borderless table-hoverable">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Code</th>
+                                        <th scope="col">Title</th>
+                                        <th scope="col">L-T-P</th>
+                                        <th scope="col">IM</th>
+                                        <th scope="col">EM</th>
+                                        <th scope="col">Credits</th>
+                                        <th scope="col">Type</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                        @endif
+                                    <tr>
+                                        <td></td>
+                                        <td>Code</td>
+                                        <td>{{ $this->subject_title($c->id) }}</td>
+                                        <td>{{ $c->lectures . '-' . $c->tutorials . '-' . $c->practicals }}</td>
+                                        <td>{{ $c->internal_exam_marks }}</td>
+                                        <td>{{ $c->end_exam_marks }}</td>
+                                        <td>{{ $c->credits }}</td>
+                                        <td>{{ $c->subject_category_id }}</td>
+                                    </tr>
+                        
+                        @if ($loop->last)
+                                </tbody>
+                            </table>
+                        @endif
+                    @empty
+                        <div class="alert alert-warning" role="alert">
+                            Sorry. Nothing to show yet.
+                        </div>
+                    @endforelse
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="syllabus">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#syllabus-pane" aria-expanded="false" aria-controls="syllabus-pane">
+                  Subjects and Syllabus
+                </button>
+              </h2>
+              <div id="syllabus-pane" class="accordion-collapse collapse" aria-labelledby="syllabus" data-bs-parent="#regulation-accordion" wire:ignore.self>
+                <div class="accordion-body">
+
+                </div>
+              </div>
+            </div>
+          </div>
+    @endif

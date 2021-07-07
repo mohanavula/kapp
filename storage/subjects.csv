@@ -1,0 +1,294 @@
+subject_code,short_name,name,department,is_theory,is_lab,is_project
+1501106,ES,Environmental Studies,CED,1,0,0
+1501206,ES,Environmental Studies,CED,1,0,0
+1501301,EM,Engineering Mechanics,CED,1,0,0
+1501303,SUR1,Surveying-1,CED,1,0,0
+1501304,BM,Building Materials,CED,1,0,0
+1501305,FM,Fluid Mechanics,CED,1,0,0
+1501306,EGEO,Engineering Geology,CED,1,0,0
+1501307,SFW1LAB,Surveying Field Work-1 Laboratory,CED,0,1,0
+1501308,EGEOLAB,Engineering Geology Laboratory,CED,0,1,0
+1501402,MM1,Mechanics of Materials-1,CED,1,0,0
+1501403,SUR2,Surveying-2,CED,1,0,0
+1501404,BC,Building Construction,CED,1,0,0
+1501405,HM,Hydraulic Machinery,CED,1,0,0
+1501406,GTE1,Geotechnical Engineering-1,CED,1,0,0
+1501407,SFW2LAB,Surveying Field Work-2 Laboratory,CED,0,1,0
+1501408,FMHMLAB,Fluid Mechanics and Hydraulic Machinery Laboratory,CED,0,1,0
+1501409,BEEELAB,Basic Electrical and Electronics Engineering Laboratory,CED,0,1,0
+1501501,MM2,Mechanics of Materials-2,CED,1,0,0
+1501502,GTE2,Geotechnical Engineering-2,CED,1,0,0
+1501503,HY,Hydrology,CED,1,0,0
+1501504,CT,Concrete Technology,CED,1,0,0
+1501505,WSE,Water Supply Engineering,CED,1,0,0
+1501506,S1501506,Introduction to Java Programming,CED,1,0,0
+1501507,S1501507,Operations Research,CED,1,0,0
+1501508,S1501508,Entrepreneurship,CED,1,0,0
+1501509,SMLAB,Strength of Materials Laboratory,CED,1,0,0
+1501510,GTELAB,Geotechnical Engineering Laboratory,CED,1,0,0
+1501602,SA1,Structural Analysis-1,CED,1,0,0
+1501603,RCC1,Design and Detailing of Reinforced Concrete Structures-1,CED,1,0,0
+1501604,WRE1,Water Resources Engineering-1,CED,1,0,0
+1501605,TE1,Transportation Engineering-1,CED,1,0,0
+1501606,S1501606,Remote Sensing and GIS,CED,1,0,0
+1501607,S1501607,Watershed and River Basin Management,CED,1,0,0
+1501608,S1501608,Civil Engineering Profesional Practice,CED,1,0,0
+1501609,EELAB,Environmental Engineering Laboratory,CED,0,1,0
+1501610,CADLAB,Computer Aided Building Drawing Laboratory,CED,0,1,0
+1501701,SA2,Structural Analysis-2,CED,1,0,0
+1501702,RCC2,Design and Detailing of Reinforced Concrete Structures-2,CED,1,0,0
+1501703,DDSS,Design and Detailing of Steel Structures,CED,1,0,0
+1501704,TE2,Transportation Engineering-2,CED,1,0,0
+1501705,WRE2,Water Resources Engineering-2,CED,1,0,0
+1501706,S1501706,Prestressed Concrete,CED,1,0,0
+1501707,S1501707,Advanced Foundation Engineering,CED,1,0,0
+1501708,S1501708,Construction Planning and Management,CED,1,0,0
+1501709,CTHMLAB,Concrete and Highway Materials Laboratory,CED,0,1,0
+1501710,CADLAB,CAAD Laboratory,CED,0,1,0
+1501801,SE,Sanitary Engineering,CED,1,0,0
+1501802,DDIS,Design and Drawing of Irrigation Structures,CED,1,0,0
+1501803,QSV,Quantity Surveying and Valuation,CED,1,0,0
+1501804,S1501804,Finite Element Method,CED,1,0,0
+1501805,S1501805,Environmental Impact Assessment,CED,1,0,0
+1501806,S1501806,Bridge Engineering,CED,1,0,0
+1501807,SMNR,Seminar,CED,0,0,1
+1501808,PJW,Project Work,CED,0,0,1
+1502205,EC,Electrical Circuits,EEED,1,0,0
+1502304,EMF,Electromagnetic Fields,EEED,1,0,0
+1502305,NT,Network Theory,EEED,1,0,0
+1502306,EM1,Electrical Machines -1,EEED,1,0,0
+1502308,ECSLAB,Electrical Circuits and Simulation Lab,EEED,0,1,0
+1502401,BEEE,Basic Electrical and Electronics Engineering,EEED,1,0,0
+1502403,GEP,Generation of Electrical Power,EEED,1,0,0
+1502404,EEM,Electrical and Electronics Measurements,EEED,1,0,0
+1502405,EM2,Electrical Machines-2,EEED,1,0,0
+1502406,PS1,Power Systems-1,EEED,1,0,0
+1502408,EM1LAB,Electrical Machines-1 Lab,EEED,0,1,0
+1502502,CS,Control Systems,EEED,1,0,0
+1502503,PE,Power Electronics,EEED,1,0,0
+1502504,PS2,Power Systems-2,EEED,1,0,0
+1502505,EM3,Electrical Machines-3,EEED,1,0,0
+1502509,S1502509,Electrical Measurements Lab,EEED,0,1,0
+1502510,S1502510,Electrical Machines-2 Lab,EEED,0,1,0
+1502603,S1502603,Power Semiconductor Drives,EEED,1,0,0
+1502604,S1502604,Power Systems - III,EEED,1,0,0
+1502605,S1502605,Power System Operation and Control,EEED,1,0,0
+1502607,S1502607,Soft Computing Techniques,EEED,1,0,0
+1502610,S1502610,Power Electronics and Simulation Lab,EEED,0,1,0
+1502611,S1502611,Control Systems and Simulation Lab,EEED,0,1,0
+1502702,S1502702,Advanced Control Systems,EEED,1,0,0
+1502703,S1502703,HVDC Transmission,EEED,1,0,0
+1502704,S1502704,Switchgear and Protection,EEED,1,0,0
+1502705,S1502705,Electrical Distribution Systems,EEED,1,0,0
+1502706,S1502706,High Voltage Engineering,EEED,1,0,0
+1502707,S1502707,Power Quality,EEED,1,0,0
+1502708,S1502708,Switch Mode Power Converters,EEED,1,0,0
+1502710,S1502710,Power Systems Simulation Lab,EEED,0,1,0
+1502801,S1502801,Utilization of Electrical Power,EEED,1,0,0
+1502802,S1502802,FACTS,EEED,1,0,0
+1502803,S1502803,Electrical Machine Design,EEED,1,0,0
+1502804,S1502804,Special Electrical Machines,EEED,1,0,0
+1502805,S1502805,Energy Auditing and Demand Side Management,EEED,1,0,0
+1502806,S1502806,Reliability Engineering and Applications to Power Systems,EEED,1,0,0
+1502807,S1502807,Seminar,EEED,1,0,0
+1502808,S1502808,Project Work,EEED,1,0,0
+1503103,EG,Engineering Graphics,MED,1,0,0
+1503105,ED1,Engineering Drawing-1,MED,1,0,0
+1503205,ED2,Engineering Drawing-2,MED,1,0,0
+1503301,S1503301,Engineering Mechanics,MED,1,0,0
+1503304,S1503304,Material Science and Metallurgy,MED,1,0,0
+1503305,S1503305,Thermodynamics,MED,1,0,0
+1503306,S1503306,Machine Drawing,MED,1,0,0
+1503307,S1503307,Material Science Lab and Mechanics of Solids Lab,MED,0,1,0
+1503308,S1503308,Manufacturing Technology Lab,MED,0,1,0
+1503309,S1503309,Aptitude,MED,0,1,0
+1503402,S1503402,Composite and Nano materials,MED,1,0,0
+1503404,S1503404,Kinematics of Machinery,MED,1,0,0
+1503405,S1503405,Thermal Engineering – I,MED,1,0,0
+1503406,S1503406,Manufacturing Technology,MED,1,0,0
+1503501,S1503501,Heat Transfer,MED,1,0,0
+1503502,S1503502,Design of Machine Elements-I,MED,1,0,0
+1503503,S1503503,Machine tools,MED,1,0,0
+1503504,S1503504,Dynamics of Machinery- I,MED,1,0,0
+1503505,S1503505,Thermal Engineering II,MED,1,0,0
+1503506,S1503506,Hydraulic Machinery,MED,1,0,0
+1503507,S1503507,Industrial Management,MED,1,0,0
+1503508,S1503508,Entrepreneurship,MED,1,0,0
+1503509,S1503509,Thermal Engineering Lab,MED,0,1,0
+1503602,S1503602,Design of Machine Elements-2,MED,1,0,0
+1503603,S1503603,Operations Research,MED,1,0,0
+1503604,S1503604,Dynamics of Machinery-2,MED,1,0,0
+1503605,S1503605,Refrigeration and Air- Conditioning,MED,1,0,0
+1503606,S1503606,Automobile Engineering,MED,1,0,0
+1503607,S1503607,IC Engines,MED,1,0,0
+1503608,S1503608,Power plant Engineering,MED,1,0,0
+1503609,S1503609,Metrology and Machine Tools Lab,MED,0,1,0
+1503610,S1503610,Heat Transfer and Dynamics Lab,MED,0,1,0
+1503701,S1503701,CAD/CAM,MED,1,0,0
+1503702,S1503702,Metrology,MED,1,0,0
+1503703,S1503703,Finite Element Methods,MED,1,0,0
+1503704,S1503704,Instrumentation and Control Systems,MED,1,0,0
+1503705,S1503705,Production and Operations Management,MED,1,0,0
+1503706,S1503706,Computational Fluid Dynamics,MED,1,0,0
+1503707,S1503707,Mechatronics,MED,1,0,0
+1503708,S1503708,Modern Manufacturing Methods,MED,1,0,0
+1503709,S1503709,Tool Design,MED,1,0,0
+1503710,S1503710,Rapid prototyping,MED,1,0,0
+1503711,S1503711,Instrumentation and Control Systems Lab,MED,0,1,0
+1503712,S1503712,CAD/CAM Lab,MED,0,1,0
+1503801,S1503801,Automation and Robotics,MED,1,0,0
+1503802,S1503802,Renewable Energy Sources,MED,1,0,0
+1503803,S1503803,Gas Turbines and Jet Propulsion,MED,1,0,0
+1503804,S1503804,Geometric Modeling,MED,1,0,0
+1503805,S1503805,Reliability in Engineering Systems,MED,1,0,0
+1503806,S1503806,Industrial Safety and Management,MED,1,0,0
+1503807,S1503807,Seminar,MED,0,0,1
+1503808,S1503808,Project Work,MED,0,0,1
+1504302,S1504302,Electromagnetic Fields,ECED,1,0,0
+1504303,EDV,Electronic Devices and Circuits,EEED,1,0,0
+1504304,S1504304,Signals and Systems,ECED,1,0,0
+1504308,S1504308,Electronic Devices and Circuits Lab,ECED,0,1,0
+1504401,S1504401,Analog Communications,ECED,1,0,0
+1504402,STLD,Switching Theory and Logic Design,EEED,1,0,0
+1504403,S1504403,Electronic Circuit Analysis,ECED,1,0,0
+1504404,S1504404,Pulse and Digital Circuits,ECED,1,0,0
+1504405,S1504405,Electromagnetic waves and Transmission Lines,ECED,1,0,0
+1504406,S1504406,Probability Theory and Stochastic Processes,ECED,1,0,0
+1504407,S1504407,Electronic Circuit Analysis Lab,ECED,0,1,0
+1504408,S1504408,Pulse and Digital Circuits Lab,ECED,0,1,0
+1504501,S1504501,Microprocessors and Interfacing,ECED,1,0,0
+1504502,S1504502,Linear IC Applications,ECED,1,0,0
+1504503,S1504503,Digital Communications,ECED,1,0,0
+1504504,S1504504,Antenna and Wave Propagation,ECED,1,0,0
+1504506,S1504506,Digital IC Applications,ECED,1,0,0
+1504507,S1504507,IC Applications Lab,ECED,0,1,0
+1504508,S1504508,Microprocessors,ECED,1,0,0
+1504602,S1504602,Digital Signal Processing,ECED,1,0,0
+1504603,S1504603,Microwave Engineering,ECED,1,0,0
+1504605,S1504605,Microcontrollers and Applications,ECED,1,0,0
+1504609,S1504609,Microprocessors and Microcontrollers Lab,ECED,0,1,0
+1504610,S1504610,Digital Signal Processing Lab,ECED,0,1,0
+1504702,S1504702,VLSI Design,ECED,1,0,0
+1504703,S1504703,Electronic Measurements and Instrumentation,ECED,1,0,0
+1504704,S1504704,Optical communications,ECED,1,0,0
+1504705,S1504705,Digital Image Processing,ECED,1,0,0
+1504706,S1504706,Embedded Real Time Operating Systems,ECED,1,0,0
+1504707,S1504707,Neural networks and Fuzzy Logic,ECED,1,0,0
+1504708,S1504708,Data Communications,ECED,1,0,0
+1504709,S1504709,Microwave and Optical Communications Lab,ECED,0,1,0
+1504710,S1504710,VLSI Lab,ECED,1,0,0
+1504801,S1504801,Cellular and Mobile Communications,ECED,1,0,0
+1504802,S1504802,Satellite Communications,ECED,1,0,0
+1504803,S1504803,RADAR Systems,ECED,1,0,0
+1504804,S1504804,Speech Processing,ECED,1,0,0
+1504805,S1504805,OOPS through Java Programming,ECED,1,0,0
+1504806,S1504806,Data Acquisition Systems,ECED,1,0,0
+1504807,S1504807,Spread Spectrum Communications,ECED,1,0,0
+1504808,S1504808,Biomedical Instrumentation,ECED,1,0,0
+1504809,S1504809,Seminar,ECED,0,0,1
+1504810,S1504810,Project,ECED,0,0,1
+1505105,CP,Programming in C,CSED,1,0,0
+1505107,CPLAB,Programming in C Lab,CSED,0,1,0
+1505203,CP,Programming in C,CSED,1,0,0
+1505205,S1505205,Introduction to Data Structures,CSED,1,0,0
+1505208,CPLAB,Programming in C Laboratory,CSED,0,1,0
+1505302,S1505302,Advanced Data Structures,CSED,1,0,0
+1505303,S1505303,Digital Logic Design,CSED,1,0,0
+1505304,S1505304,Discrete Mathematics,CSED,1,0,0
+1505306,S1505306,Object Oriented Programming through C++,CSED,1,0,0
+1505307,S1505307,Object Oriented Programming and Data Structures Lab,CSED,0,1,0
+1505402,S1505402,Operating Systems,CSED,1,0,0
+1505403,S1505403,Database Management Systems,CSED,1,0,0
+1505404,S1505404,Formal Languages and Automata Theory,CSED,1,0,0
+1505405,S1505405,Java Programming,CSED,1,0,0
+1505406,S1505406,Computer Organization,CSED,1,0,0
+1505408,S1505408,Java Programming Lab,CSED,0,1,0
+1505501,S1505501,Web Technologies,CSED,1,0,0
+1505502,S1505502,Computer Networks,CSED,1,0,0
+1505503,S1505503,Software Engineering,CSED,1,0,0
+1505504,S1505504,Compiler Design,CSED,1,0,0
+1505505,S1505505,Advanced Computer Architecture,CSED,1,0,0
+1505506,S1505506,Multimedia Systems,CSED,1,0,0
+1505507,S1505507,Principles of Programming Languages,CSED,1,0,0
+1505509,S1505509,Web Technologies Lab,CSED,0,1,0
+1505601,S1505601,Object Oriented Analysis and Design,CSED,1,0,0
+1505602,S1505602,Design and Analysis of Algorithms,CSED,1,0,0
+1505603,S1505603,Cryptography and Network Security,CSED,1,0,0
+1505604,S1505604,Data Mining,CSED,1,0,0
+1505605,S1505605,Mobile Application Development,CSED,1,0,0
+1505606,S1505606,Machine Learning,CSED,1,0,0
+1505607,S1505607,Distributed Systems,CSED,1,0,0
+1505608,S1505608,Unix and Shell Programming,CSED,1,0,0
+1505609,S1505609,UML and Data Mining Lab,CSED,0,1,0
+1505610,S1505610,Mobile Application Development Lab,CSED,0,1,0
+1505701,S1505701,Big Data Technologies,CSED,1,0,0
+1505702,S1505702,Cloud Computing,CSED,1,0,0
+1505703,S1505703,Artificial Intelligence,CSED,1,0,0
+1505704,S1505704,Software Testing,CSED,1,0,0
+1505705,S1505705,Computer Graphics,CSED,1,0,0
+1505706,S1505706,Mobile Computing,CSED,1,0,0
+1505707,S1505707,Natural Language Processing,CSED,1,0,0
+1505708,S1505708,Internet of Things,CSED,1,0,0
+1505709,S1505709,Software Testing Lab,CSED,0,1,0
+1505710,S1505710,Internet of Things Lab,CSED,0,1,0
+1505801,S1505801,Software Project Management,CSED,1,0,0
+1505802,S1505802,Ethical Hacking,CSED,1,0,0
+1505804,S1505804,Digital Image Processing,CSED,1,0,0
+1505805,S1505805,Social Network Mining and Analysis,CSED,1,0,0
+1505806,S1505806,Soft Computing,CSED,1,0,0
+1505807,S1505807,Technical Seminar,CSED,1,0,0
+1505808,S1505808,Project Work,CSED,1,0,0
+1511302,FMHM,Fluid Mechanics and Hydraulic Machinery,CED,1,0,0
+1511307,FMHMLAB,Fluid Mechanics and Hydraulic Machinery Lab,CED,0,1,0
+1511403,S1511403,Mechanics of Fluids,CED,1,0,0
+1511407,S1511407,Fluid Mechanics and Hydraulic Machines Lab,CED,1,0,0
+1512306,S1512306,Electrical Machines,EEED,1,0,0
+1512307,S1512307,Electrical Engineering Lab,EEED,0,1,0
+1512604,S1512604,Control Systems,EEED,1,0,0
+1513608,S1513608,Optimization Techniques,MED,1,0,0
+1514401,AEC,Analog Electronic Circuits,ECED,1,0,0
+1514407,EDCLAB,Electronic Devices and Circuits Lab,ECED,0,1,0
+1514506,S1514506,Digital Signal Processing,ECED,1,0,0
+1514507,S1514507,Signals & Systems,ECED,1,0,0
+1514508,S1514508,Embedded Systems,ECED,1,0,0
+1514601,S1514601,Linear and Digital Integrated Circuit Analysis,ECED,1,0,0
+1514602,S1514602,Microprocessors and Microcontrollers,ECED,1,0,0
+1514606,S1514606,Instrumentation,ECED,1,0,0
+1514709,S1514709,Micro Processors and Micro Controllers Lab,ECED,0,1,0
+1515505,S1515505,Computer Organization,CSED,1,0,0
+1515606,S1515606,Data structures,CSED,1,0,0
+1515607,S1515607,Computer Networks,CSED,1,0,0
+1515608,S1515608,Database Management Systems,CSED,1,0,0
+1521101,M1,Mathematics-1,HSD,1,0,0
+1521102,M2,Mathematics-2,HSD,1,0,0
+1521201,M2,Mathematics-2,HSD,1,0,0
+1521202,M3,Mathematics-3,HSD,1,0,0
+1521301,M4,Mathematics-4,HSD,1,0,0
+1521302,PS,Probability and Statistics,HSD,1,0,0
+1521401,S1521401,Probability and Statistics,HSD,1,0,0
+1522102,EP,Engineering Physics,HSD,1,0,0
+1522201,EP,Engineering Physics,HSD,1,0,0
+1523103,EC,Engineering Chemistry,HSD,1,0,0
+1523203,EC,Engineering Chemistry,HSD,1,0,0
+1524104,ENG1,English-1,HSD,1,0,0
+1524108,ELCSLAB,English Language and Communication Skills Laboratory,HSD,1,0,0
+1524204,ENG2,English-2,HSD,1,0,0
+1524207,ELCSLAB,English Language and Communication Skills Lab,HSD,0,1,0
+1524510,S1524510,Advanced English Communication Skills Lab,HSD,0,1,0
+1524609,S1524609,Advanced English communication Lab,HSD,0,1,0
+1525106,HVPE,Human Values and Professional Ethics,HSD,1,0,0
+1525206,HVPE,Human Values and Professional Ethics,HSD,1,0,0
+1525305,S1525305,Managerial Economics and Financial Analysis,HSD,1,0,0
+1525407,S1525407,Database Management Systems Lab,CSED,0,1,0
+1525501,MEFA,Managerial Economics And Financial Analysis,HSD,1,0,0
+1525601,MEFA,Managerial Economics and Financial Analysis,HSD,1,0,0
+1525701,S1525701,Management Science,HSD,1,0,0
+1525803,S1525803,Management Science,HSD,1,0,0
+1599107,PCLAB,Physics and Chemistry Laboratory,HSD,0,1,0
+1599108,EW,Engineering Workshop,MED,0,1,0
+1599207,EW,Engineering Workshop,MED,1,0,0
+1599208,PCLAB,Physics and Chemistry Lab,HSD,0,1,0
+1599301,S1599301,Electrical and Electronics Engineering,EEED,1,0,0
+1599303,S1599303,Basic Electrical and Electronics Engineering,EEED,1,0,0
+1599308,S1599308,Electrical and Electronics Engineering Lab,EEED,0,1,0
+1599408,S1599408,Basic Electrical and Electronics Engineering Lab,EEED,1,0,0
