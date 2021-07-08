@@ -195,6 +195,7 @@ class ExaminationTables extends Migration
                 ->references('id')
                 ->on('subjects')
                 ->onDelete('cascade');
+            $table->unique(['student_id', 'subject_id']);
         });
 
         /**
@@ -202,9 +203,14 @@ class ExaminationTables extends Migration
          */
         Schema::create('end_exam_marks', function(Blueprint $table) {
             $table->id('id');
+            $table->unsignedBigInteger('exam_id');
             $table->unsignedBigInteger('student_id');
             $table->unsignedBigInteger('subject_id');
             $table->unsignedBigInteger('end_exam_marks');
+            $table->foreign('exam_id', 'f_end_exam_marks_exam_id')
+                ->references('id')
+                ->on('exams')
+                ->onDelete('cascade');
             $table->foreign('student_id', 'f_end_exam_marks_student_id')
                 ->references('id')
                 ->on('students')
@@ -213,7 +219,7 @@ class ExaminationTables extends Migration
                 ->references('id')
                 ->on('subjects')
                 ->onDelete('cascade');
-            $table->unique(['student_id', 'subject_id']);
+            $table->unique(['exam_id', 'student_id', 'subject_id']);
         });
 
         /**

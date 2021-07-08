@@ -4,14 +4,15 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class Exam extends Model
+class ExamSchedule extends Model
 {
     use HasFactory;
 
     protected $guarded = [];
 
-    public function exam_schedules() {
-        return $this->hasMany(ExamSchedule::class);
+    public function exam() {
+        return $this->BelongsTo(Exam::class);
     }
 }
