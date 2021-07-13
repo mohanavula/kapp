@@ -357,17 +357,17 @@ class DatabaseSeeder extends Seeder
         }
 
         /**
-         * join table: curriculum_subjects
+         * join table: curriculum_subject
          */
 
-        $curriculum_subjects = Excel::toCollection(null, storage_path('curriculum-subjects.csv'))[0];
+        $curriculum_subject = Excel::toCollection(null, storage_path('curriculum-subjects.csv'))[0];
         $specialization = '';
         $specialization_id = '';
         $semester = '';
         $semester_id ='';
         $regulation = '';
         $r_id = '';
-        foreach($curriculum_subjects->splice(1) as $cs) {
+        foreach($curriculum_subject->splice(1) as $cs) {
             if ($regulation != $cs[1]) {
                 $regulation = $cs[1];
                 $r_id = DB::table('regulations')->where('short_name', '=', $cs[1])->get()[0]->id;
@@ -387,7 +387,7 @@ class DatabaseSeeder extends Seeder
                 ->get()[0]->id;
             $subject_id = DB::table('subjects')->where('subject_code', '=', $cs[4])->get()[0]->id;
 
-            DB::table('curriculum_subjects')->insert([
+            DB::table('curriculum_subject')->insert([
                 'curriculum_id' => $curriculum_id,
                 'subject_id' => $subject_id,
             ]);

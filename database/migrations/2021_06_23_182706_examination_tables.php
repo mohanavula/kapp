@@ -127,8 +127,9 @@ class ExaminationTables extends Migration
             $table->string('short_name', Constants::TITLE_SHORT_LENGTH)->unique();
             $table->string('name', Constants::TITLE_LENGTH);
             $table->year('academic_year');
-            $table->date('start_date');
-            $table->date('end_date');
+            $table->enum('status', ['ACTIVE', 'CLOSED', 'CANCELLED'])->default('ACTIVE');
+            // $table->date('start_date');
+            // $table->date('end_date');
             $table->enum('exam_category', ['REGULAR', 'SUPPLEMENTARY', 'MIDTERM']);
             $table->foreign('semester_id', 'f_exams_semester_id')
                 ->references('id')
@@ -143,6 +144,7 @@ class ExaminationTables extends Migration
         Schema::create('exam_schedules', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('exam_id');
+            $table->unsignedBigInteger('specialization_id');
             $table->unsignedBigInteger('subject_id');
             $table->dateTime('schedule_date');
             $table->dateTime('exam_date')->nullable();
@@ -150,12 +152,16 @@ class ExaminationTables extends Migration
                 ->references('id')
                 ->on('exams')
                 ->onDelete('cascade');
+            $table->foreign('specialization_id', 'f_exam_schedules_specialization_id')
+                ->references('id')
+                ->on('specializations')
+                ->onDelete('cascade');
             $table->foreign('subject_id', 'f_exam_schedules_subject_id')
                 ->references('id')
                 ->on('subjects')
                 ->onDelete('cascade');
             $table->timestamps();
-            $table->unique(['exam_id', 'subject_id']);
+            $table->unique(['exam_id', 'specialization_id', 'subject_id']);
         });
 
         /**

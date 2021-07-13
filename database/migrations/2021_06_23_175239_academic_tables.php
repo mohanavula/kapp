@@ -229,7 +229,7 @@ class AcademicTables extends Migration
         /**
          * Table to model curriculum. This is join table b/w curriculum and subjects
          */
-        Schema::create('curriculum_subjects', function (Blueprint $table) {
+        Schema::create('curriculum_subject', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('curriculum_id');
             $table->unsignedBigInteger('subject_id');

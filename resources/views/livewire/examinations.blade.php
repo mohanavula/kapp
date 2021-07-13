@@ -3,6 +3,9 @@
         vsEndDate: @entangle('vs_end_date'), 
         examSchedule: @entangle('exam_schedule'),
     }">
+
+    @livewire('exam-schedule-data-upload')
+
     <div>Create examinations schedule</div>
     <div class="row my-2 g-2"> 
         <div class="col-md">

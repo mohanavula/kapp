@@ -4,7 +4,8 @@
     <div class="card">
         <h3 class="card-header">Examinations</h3>
         <div class="card-body">
-            <livewire:examinations />
+            
+            @livewire('exams-scheduler')
         </div>
     </div>
 @endsection
