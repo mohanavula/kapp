@@ -17,4 +17,8 @@ class Semester extends Model
     public function curricula() {
         return $this->hasMany(Curriculum::class);
     }
+
+    public function exams() {
+        return $this->hasMany(Exam::class);
+    }
 }

@@ -25,6 +25,7 @@ class ExamsScheduler extends Component
     public $regulation_name;
     public $semester_number;
     public $semester_id;
+    public $semester;
 
     public $schedule = [];
     public $records = 0;
@@ -59,7 +60,7 @@ class ExamsScheduler extends Component
         $exam = Exam::create([
             'semester_id' => $this->semester_id,
             'short_name' => $this->get_examination_code(),
-            'name' => $this->semester_id,
+            'name' => $this->get_examination_name(),
             'academic_year' => $this->academic_year,
             'exam_category' => $this->exam_category,
         ]);
@@ -110,7 +111,8 @@ class ExamsScheduler extends Component
             $this->addError('semester_number', 'Required field Semester number is not found. No such semester number: ' . $this->semester_number . '.');
             return;
         }
-        $this->semester_id = $this->regulation->semesters()->where('semester_number', $this->semester_number)->first()->id;
+        $this->semester = $this->regulation->semesters()->where('semester_number', $this->semester_number)->first();
+        $this->semester_id = $this->semester->id;
         
         // process schedule
         
@@ -233,14 +235,16 @@ class ExamsScheduler extends Component
     }
 
     private function get_examination_name() {
-        $start_date = $this->get_start_date();
         return $this->regulation->program->short_name . '-' 
             . $this->regulation->short_name . '-' 
+            . $this->semester->name . '-' 
             . $this->exam_categories[$this->exam_category] . ' of ' 
-            . date_format(DateTime::createFromFormat('Y-m-d', $this->start_date), 'M-Y');
+            . date_format(DateTime::createFromFormat('Y-m-d', $this->get_start_date()), 'M-Y');
     }
 
     private function get_start_date() {
-        return array_multisort(array_column($this->schedule, 'schedule_date'))[0];
+        $dates = array_column($this->schedule, 'schedule_date');
+        array_multisort($dates);
+        return $dates[0];
     }
 }

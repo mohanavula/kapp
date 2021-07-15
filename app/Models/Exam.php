@@ -14,4 +14,8 @@ class Exam extends Model
     public function exam_schedules() {
         return $this->hasMany(ExamSchedule::class);
     }
+
+    public function semester() {
+        return $this->belongsTo(Semester::class);
+    }
 }
