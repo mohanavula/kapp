@@ -21,6 +21,10 @@ class Curriculum extends Component
     public $semester_id='';
     public $specialization_id='';
 
+    public function show_subject_progression_modal($id) {
+        $this->emit('show_subject_progression', $id);
+    }
+
     public function selectRegulation($id) {
         $this->regulation_id = $id;
         $this->regulation = Regulation::find($id);

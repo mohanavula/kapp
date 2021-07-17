@@ -11,4 +11,11 @@ class Student extends Model
 
     protected $guarded = [];
 
+    public function specialization() {
+        return $this->belongsTo(Specialization::class);
+    }
+
+    public function regulation() {
+        return $this->belongsTo(Regulation::class);
+    }
 }
