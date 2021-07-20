@@ -40,6 +40,11 @@ return [
             'root' => storage_path('app/data'),
         ],
 
+        'syllabus' => [
+            'driver' => 'local',
+            'root' => storage_path('app/syllabus'),
+        ],
+
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),

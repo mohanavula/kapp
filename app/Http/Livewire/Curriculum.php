@@ -25,6 +25,10 @@ class Curriculum extends Component
         $this->emit('show_subject_progression', $id);
     }
 
+    public function view_syllabus($id) {
+        $this->emit('view_syllabus', $id);
+    }
+
     public function selectRegulation($id) {
         $this->regulation_id = $id;
         $this->regulation = Regulation::find($id);
