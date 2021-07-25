@@ -4,17 +4,23 @@
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Syllabus</h5>
+                    <h5 class="modal-title text-truncate">{{ $subject_name }}</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    {!! $syllabus !!}
+                    <div>{!! $syllabus !!}</div>
+                    @if ($syllabus_found)
+                        {{-- @livewire('curriculum-reviews', ['obj_type' => 'subject', 'obj_id' => $subject_id ]) --}}
+                        @livewire('curriculum-reviews')
+                    @endif
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
+
+        
     </div>
 
     <script type="module">

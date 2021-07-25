@@ -8,8 +8,18 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    {{ $message }}
-                    <canvas id="myChart" class="p-4 m-4" x-show="showChart"></canvas>
+                    <div>
+                        <span>{{ $message }}</span>
+                        <span class="ms-2" style="cursor: pointer" x-on:click="downloadPlot()">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                                <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+                                <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+                              </svg>
+                        </span>
+                    </div>
+                    <div>
+                        <canvas id="myChart" class="p-4 m-4" x-show="showChart"></canvas>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -27,11 +37,17 @@
         })
 
         window.addEventListener('update_chart', (payload) => {
-            console.log(payload)
             window.myChart.data.labels = payload.detail.labels
             window.myChart.data.datasets = payload.detail.datasets
             window.myChart.update()
-        }) 
+        })
+        
+        window.downloadPlot = function () {
+            var a = document.createElement('a');
+            a.href = window.myChart.toBase64Image('image/png', 1);
+            a.download = 'plot.png';
+            a.click();
+        }
 
         var ctx = document.getElementById('myChart');
         window.myChart = new Chart(ctx, {
@@ -52,6 +68,8 @@
                         }
                     },
 
+                    
+
                     // x: {
                     //     display: true,
                     //     title: {
@@ -60,6 +78,11 @@
                     //         color: 'rgba(255, 159, 64, 1)'
                     //     }
                     // }
+                },
+                animation: {
+                    onComplete: function() {
+                        
+                    }
                 }
             }
         });

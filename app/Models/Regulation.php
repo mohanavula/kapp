@@ -16,4 +16,8 @@ class Regulation extends Model
     public function semesters() {
         return $this->hasMany(Semester::class);
     }
+
+    public function reviews() {
+        return $this->hasMany(Review::class);
+    }
 }

@@ -13,4 +13,8 @@ class Subject extends Model
         return $this->belongsToMany(Curriculum::class, 'curriculum_subjects');
     }
 
+    public function reviews() {
+        return $this->hasMany(Review::class);
+    }
+
 }
