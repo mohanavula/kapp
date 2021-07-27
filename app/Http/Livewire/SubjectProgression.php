@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Models\EndExamMark;
+use App\Models\Mark;
 use App\Models\Specialization;
 use App\Models\Subject;
 use Illuminate\Support\Facades\DB;
@@ -43,10 +44,13 @@ class SubjectProgression extends Component
         $datasets = [];
         
         // end exam marks : all students
-        $marks = EndExamMark::with('student')->where('subject_id', $id)->get(); //->pluck('end_exam_marks');
+        $marks = Mark::with('student')->where('subject_id', $id)->get();
+
+        $specialization_ids = $marks->pluck('student')->pluck('specialization_id')->unique();
+        $specializations = Specialization::whereIn('id', $specialization_ids)->get();
         $hist = [10 => 0, 20  => 0, 30  => 0, 40  => 0, 50  => 0, 60  => 0, 70  => 0, 80  => 0, 90  => 0, 100  => 0];
         foreach($marks as $m) {
-            $bin = intval(ceil(($m->end_exam_marks == 0 ? 5 : $m->end_exam_marks/0.7)/10) * 10);
+            $bin = intval(ceil((($m->im + $m->em) == 0 ? 5 : $m->im + $m->em)/10) * 10);
             $hist[$bin]++;
         }
 
@@ -58,7 +62,7 @@ class SubjectProgression extends Component
         $this->data = array_values($hist);
 
         array_push($datasets, [
-            'label' => 'All',
+            'label' => $specializations->count() > 1 ? 'All' : $specializations[0]->short_name,
             'data' => array_values($hist),
             'backgroundColor' => $bg_colors[5],
             'borderColor' => $border_colors[5],
@@ -66,29 +70,30 @@ class SubjectProgression extends Component
         ]);
 
         // by specialization
-        $hists = [];
-        $specialization_ids = $marks->pluck('student')->pluck('specialization_id')->unique();
-        $specializations = Specialization::whereIn('id', $specialization_ids)->get();
-        foreach($specialization_ids as $s) {
-            $hists[$s] = [10 => 0, 20  => 0, 30  => 0, 40  => 0, 50  => 0, 60  => 0, 70  => 0, 80  => 0, 90  => 0, 100  => 0];
-        }
-        foreach($marks as $m) {
-                $bin = intval(ceil(($m->end_exam_marks == 0 ? 5 : $m->end_exam_marks/0.7)/10) * 10);
-                $hists[$m->student->specialization_id][$bin]++;
+        if ($specializations->count() > 1) {
+            $hists = [];
+            foreach($specialization_ids as $s) {
+                $hists[$s] = [10 => 0, 20  => 0, 30  => 0, 40  => 0, 50  => 0, 60  => 0, 70  => 0, 80  => 0, 90  => 0, 100  => 0];
             }
-        // dd($datasets, $specialization_ids, $hists);
-        
-        
-        foreach($specializations as $key => $s) {
-            array_push($datasets, [
-                'label' => $s->short_name,
-                'data' => array_values($hists[$s->id]),
-                'backgroundColor' => $bg_colors[$key],
-                'borderColor' => $border_colors[$key],
-                'borderWidth' => 1
-            ]);
+            $counts = $marks->countBy(function($m) {
+                return $m->student->specialization_id;
+            });
+            foreach($marks as $m) {
+                    $bin = intval(ceil((($m->im + $m->em) == 0 ? 5 : $m->im + $m->em)/10) * 10);
+                    $hists[$m->student->specialization_id][$bin] += round(100/$counts[$m->student->specialization_id], 2);
+            }
+            
+            foreach($specializations as $key => $s) {
+                array_push($datasets, [
+                    'label' => $s->short_name,
+                    'data' => array_values($hists[$s->id]),
+                    'backgroundColor' => $bg_colors[$key],
+                    'borderColor' => $border_colors[$key],
+                    'borderWidth' => 1
+                ]);
+            }
         }
-        // dd($datasets);
+
         $this->message = 'Percentage marks vs Percentage students ';
         $this->show_chart = false;
         $this->dispatchBrowserEvent('show_subject_progression_modal');

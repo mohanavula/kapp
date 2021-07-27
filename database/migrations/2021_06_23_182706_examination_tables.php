@@ -233,17 +233,17 @@ class ExaminationTables extends Migration
          */
         Schema::create('stats_grades', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('exam_id');
+            // $table->unsignedBigInteger('exam_id');
             $table->unsignedBigInteger('student_id');
             $table->unsignedBigInteger('subject_id');
             $table->unsignedBigInteger('internal_marks');
             $table->unsignedBigInteger('end_exam_marks');
             $table->string('grade', 2);
             $table->boolean('passed');
-            $table->foreign('exam_id', 'f_stats_grades_exam_id')
-                ->references('id')
-                ->on('exams')
-                ->onDelete('cascade');
+            // $table->foreign('exam_id', 'f_stats_grades_exam_id')
+            //     ->references('id')
+            //     ->on('exams')
+            //     ->onDelete('cascade');
             $table->foreign('student_id', 'f_stats_grades_student_id')
                 ->references('id')
                 ->on('students')
@@ -253,7 +253,8 @@ class ExaminationTables extends Migration
                 ->on('subjects')
                 ->onDelete('cascade');
             $table->timestamps();
-            $table->unique(['exam_id', 'student_id', 'subject_id']);
+            $table->unique(['student_id', 'subject_id']);
+            // $table->unique(['exam_id', 'student_id', 'subject_id']);
         });
 
         /**
@@ -261,22 +262,28 @@ class ExaminationTables extends Migration
          */
         Schema::create('stats_gpas', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('exam_id');
+            // $table->unsignedBigInteger('exam_id');
+            $table->unsignedBigInteger('semester_id');
             $table->unsignedBigInteger('student_id');
             $table->unsignedDouble('sgpa');
             $table->unsignedDouble('cgpa');
             $table->unsignedDouble('semester_credits');
             $table->unsignedDouble('cumulative_credits');
+            $table->foreign('semester_id', 'f_stats_gpas_semester_id')
+                ->references('id')
+                ->on('semesters')
+                ->onDelete('cascade');
             $table->foreign('student_id', 'f_stats_gpas_student_id')
                 ->references('id')
                 ->on('students')
                 ->onDelete('cascade');
-            $table->foreign('exam_id', 'f_stats_gpas_exam_id')
-                ->references('id')
-                ->on('exams')
-                ->onDelete('cascade');
+            // $table->foreign('exam_id', 'f_stats_gpas_exam_id')
+            //     ->references('id')
+            //     ->on('exams')
+            //     ->onDelete('cascade');
             $table->timestamps();
-            $table->unique(['exam_id', 'student_id']);
+            $table->unique(['semester_id', 'student_id']);
+            // $table->unique(['exam_id', 'student_id']);
         });
     }
 

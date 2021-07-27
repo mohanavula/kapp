@@ -10,7 +10,7 @@ class Subject extends Model
     use HasFactory;
 
     public function curricula() {
-        return $this->belongsToMany(Curriculum::class, 'curriculum_subjects');
+        return $this->belongsToMany(Curriculum::class);
     }
 
     public function reviews() {
