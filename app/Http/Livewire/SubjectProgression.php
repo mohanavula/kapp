@@ -80,7 +80,7 @@ class SubjectProgression extends Component
             });
             foreach($marks as $m) {
                     $bin = intval(ceil((($m->im + $m->em) == 0 ? 5 : $m->im + $m->em)/10) * 10);
-                    $hists[$m->student->specialization_id][$bin] += round(100/$counts[$m->student->specialization_id], 2);
+                    $hists[$m->student->specialization_id][$bin] += round(100/ (float) $counts[$m->student->specialization_id], 2);
             }
             
             foreach($specializations as $key => $s) {

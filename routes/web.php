@@ -25,6 +25,10 @@ Route::get('/examinations', function () {
     return view('examinations');
 })->name('examinations');
 
+Route::get('/students', function () {
+    return view('students');
+})->name('students');
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Auth::routes();

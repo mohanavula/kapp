@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'KLiQ') }}</title>
+    <title>{{ config('app.name', 'KiQ') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -42,6 +42,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('examinations') }}">Examinations</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('students') }}">Students</a>
                         </li>
                     </ul>
 

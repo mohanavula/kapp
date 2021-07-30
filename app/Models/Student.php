@@ -18,4 +18,8 @@ class Student extends Model
     public function regulation() {
         return $this->belongsTo(Regulation::class);
     }
+
+    public function aggregates() {
+        return $this->hasMany(Aggregate::class);
+    }
 }
